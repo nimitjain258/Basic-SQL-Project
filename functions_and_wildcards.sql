@@ -1,3 +1,4 @@
+USE giraffe;
 -- count the number of employees
 SELECT COUNT(emp_id)
 FROM employee;
@@ -34,4 +35,12 @@ SELECT *
 FROM client
 WHERE client_name LIKE '%LLC';
 
+-- Find any branch supplier who are in the label business
+SELECT * 
+FROM branch_supplier
+WHERE Lower(supplier_name) LIKE LOWER('%label%');
 
+-- Find an employee born in the month of October
+SELECT * 
+FROM employee
+WHERE birth_date LIKE '_____10%';
